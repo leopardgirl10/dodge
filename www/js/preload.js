@@ -8,10 +8,9 @@ DogeDodge.Preload.prototype = {
 
   preload: function () {
     this.load.spritesheet('background','assets/background.png',320,568);
-    console.log('preload start');
   },
 
-  start: function () {
+  create: function () {
     this.game.state.start('start');
   }
 

@@ -10,7 +10,7 @@ DogeDodge.Start.prototype = {
     this.background = null;
   },
 
-  start: function () {
+  create: function () {
     this.game.state.start('play');
   }
 
