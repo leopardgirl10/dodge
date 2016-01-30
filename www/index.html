@@ -1,38 +1,16 @@
 <!doctype html>
 <html>
+
   <head>
-    <title>SkilStak Dodge</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="
-      width=device-width,
-      initial-scale=1,
-      maximum-scale=1,
-      minimum-scale=1,
-      user-scalable=no"
-    >
-    <style>
-      body {
-        background: black;
-        padding: 0px;
-        margin: 0px;
-      }
-    </style>
+    <title>Dodge the Doge of Death</title>
   </head>
+
   <body>
     <script src="js/phaser.js"></script>
-    <script src="js/boot.js"></script>
-    <script src="js/preload.js"></script>
-    <script src="js/start.js"></script>
-    <script src="js/play.js"></script>
-    <script src="js/end.js"></script>
     <script>
       var game = new Phaser.Game(320,568);
-      game.state.add('boot',DogeDodge.Boot);
-      game.state.add('preload',DogeDodge.Preload);
-      game.state.add('start',DogeDodge.Start);
-      game.state.add('play',DogeDodge.Play);
-      game.state.add('end',DogeDodge.End);
-      game.state.start('boot');
+      console.log("We are here. We are HERE. WE ARE HERE!");
     </script>
   </body>
+
 </html>
