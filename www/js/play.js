@@ -14,7 +14,7 @@ DogeDodge.Play.prototype = {
 
   preload: function () {
     this.load.image('background','assets/background.png');
-    this.load.spritesheet('dodger','assets/dodger.png',46,64,2);
+    this.load.spritesheet('dodger','assets/dodger.png',46,64,2); // (w,h,f)
     
   },
 
@@ -27,7 +27,8 @@ DogeDodge.Play.prototype = {
 
     // dodger
     this.dodger = this.add.sprite(160,510,'dodger');
-    this.dodger.smoothed = false;
+    //this.dodger.smoothed = false; 
+    //this.dodger.scale.set(1);
     this.dodger.anchor.set(0.5,0.5);
     this.dodger.animations.add('blink');
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)

@@ -27,7 +27,8 @@ DogeDodge.Play.prototype = {
 
     // dodger
     this.dodger = this.add.sprite(160,510,'dodger');
-    this.dodger.smoothed = false;
+    // this.dodger.smoothed = false;
+    // this.background.scale.set(1);
     this.dodger.anchor.set(0.5,0.5);
     this.dodger.animations.add('blink');
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)
