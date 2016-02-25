@@ -32,6 +32,18 @@ DogeDodge.Play.prototype = {
     this.dodger.anchor.set(0.5,0.5);
     this.dodger.animations.add('blink');
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)
+
+    // movement keys
+    this.cursors = game.input.keyboard.createCursorKeys();
+  },
+
+  update: function() {
+    if (this.cursors.left.isDown) {
+      this.dodger.x -= 10;
+    }
+    if (this.cursors.right.isDown) {
+      this.dodger.x += 10;
+    }
   }
 
 };
