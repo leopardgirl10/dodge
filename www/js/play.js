@@ -34,7 +34,7 @@ DogeDodge.Play.prototype = {
     this.dodger.animations.add('blink');
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)
     game.physics.arcade.enable(this.dodger);
-    this.dodger.checkWorldBounds = true;
+    this.dodger.body.collideWorldBounds = true;
 
 
     // dodge
