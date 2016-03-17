@@ -34,9 +34,7 @@ DogeDodge.Play.prototype = {
     this.dodger.animations.add('blink');
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)
     game.physics.arcade.enable(this.dodger);
-    this.dodger.body.collideWorldBounds = true;
-    this.dodger.body.bounce.setTo(0.1);
-    this.dodger.body.drag.setTo(600);
+
 
     // dodge
     this.dodge = this.add.sprite(160,-32,'dodge');
@@ -55,10 +53,10 @@ DogeDodge.Play.prototype = {
 
   update: function() {
     if (this.cursors.left.isDown) {
-      this.dodger.body.velocity.x = -200;
+      this.dodger.body.velocity.x = -1200;
     }
     if (this.cursors.right.isDown) {
-      this.dodger.body.velocity.x = 200;
+      this.dodger.body.velocity.x = 1200;
     }
     if (this.dodge.y >= 568) {
       this.dodge.y = -32;
