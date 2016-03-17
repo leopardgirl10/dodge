@@ -23,7 +23,7 @@ DogeDodge.Play.prototype = {
 
     // background
     this.background = this.add.tileSprite(0,0,320,568,'background');
-    this.background.autoScroll(0,50);
+    this.background.autoScroll(0,700);
     this.background.scale.set(1);
 
     // dodger
@@ -35,8 +35,8 @@ DogeDodge.Play.prototype = {
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)
     game.physics.arcade.enable(this.dodger);
     this.dodger.body.collideWorldBounds = true;
-    this.dodger.body.bounce.setTo(0.1);
-    this.dodger.body.drag.setTo(600);
+    this.dodger.body.bounce.setTo(0.3);
+    this.dodger.body.drag.setTo(3000);
 
     // dodge
     this.dodge = this.add.sprite(160,-32,'dodge');
@@ -46,7 +46,7 @@ DogeDodge.Play.prototype = {
     //this.dodge.animations.add('blink');
     //this.dodge.animations.play('blink',2,true); // (name,fps,loop)
     game.physics.arcade.enable(this.dodge);
-    this.dodge.body.velocity.y = 1200;
+    this.dodge.body.velocity.y = 1300;
 
 
     // movement keys
@@ -55,10 +55,10 @@ DogeDodge.Play.prototype = {
 
   update: function() {
     if (this.cursors.left.isDown) {
-      this.dodger.body.velocity.x = -200;
+      this.dodger.body.velocity.x = -800;
     }
     if (this.cursors.right.isDown) {
-      this.dodger.body.velocity.x = 200;
+      this.dodger.body.velocity.x = 800;
     }
     if (this.dodge.y >= 568) {
       this.dodge.y = -32;
