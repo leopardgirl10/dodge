@@ -46,8 +46,7 @@ DogeDodge.Play.prototype = {
     //this.dodge.animations.add('blink');
     //this.dodge.animations.play('blink',2,true); // (name,fps,loop)
     game.physics.arcade.enable(this.dodge);
-    this.dodge.body.gravity.y = 8000;
-    //this.dodge.body.velocity.y = 1300;
+    this.dodge.body.velocity.y = 1300;
 
 
     // movement keys
@@ -63,7 +62,6 @@ DogeDodge.Play.prototype = {
     }
     if (this.dodge.y >= 568) {
       this.dodge.y = -32;
-      this.dodge.body.velocity.y = 0;
       this.dodge.x = game.rnd.integerInRange(0,320);
     }
   }
