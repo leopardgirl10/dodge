@@ -66,6 +66,12 @@ DogeDodge.Play.prototype = {
       this.dodge.body.velocity.y = 0;
       this.dodge.x = game.rnd.integerInRange(0,320);
     }
+    game.physics.arcade.collide(this.dodge,this.dodger,this.handleCollision);
+  },
+
+  handleCollision: function() {
+    console.log("OUUCHH");
+    game.state.start('Play')
   }
 
 };
