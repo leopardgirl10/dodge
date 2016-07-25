@@ -3,6 +3,7 @@
 
 // An empty function to be the Play state object
 function Play () {};
+function Play.prototype = {}
 
 function Play.prototype.init {
    console.log("%c~~~ Booting DogeDodge ~~~\n Compliments of SkilStak",
