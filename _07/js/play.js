@@ -1,24 +1,21 @@
 // State: DogeDodge.Play
 'use strict'
 
-var DogeDodge = {};
+// An empty function to be the Play state object
+function Play () {};
 
-DogeDodge.Play = function () {};
-
-DogeDodge.Play.prototype = {
-
-  init: function () {
-    console.log("%c~~~ Booting DogeDodge ~~~\n Compliments of SkilStak",
+function Play.prototype.init {
+   console.log("%c~~~ Booting DogeDodge ~~~\n Compliments of SkilStak",
                 "color:#fdf6e3; background:#073642");
-  },
+}
 
-  preload: function () {
+function Play.prototype.preload () {
     this.load.image('background','assets/background.png');
     this.load.spritesheet('dodger','assets/dodger.png',46,64,2); // (w,h,f)
     this.load.spritesheet('dodge','assets/doge.png',64,64,1); // (w,h,f)
-  },
+}
 
-  create: function () {
+function Play.prototype.create () {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     // background
@@ -52,9 +49,11 @@ DogeDodge.Play.prototype = {
 
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
-  },
-
-  update: function() {
+  }
+  
+  
+  function Play.prototype.update function() {
+    
     if (this.cursors.left.isDown) {
       this.dodger.body.velocity.x = -800;
     }
@@ -66,13 +65,10 @@ DogeDodge.Play.prototype = {
       this.dodge.body.velocity.y = 0;
       this.dodge.x = game.rnd.integerInRange(0,320);
     }
-    game.physics.arcade.collide(this.dodge,this.dodger,this.handleCollision);
-  },
-
-  handleCollision: function() {
-    console.log("OUUCHH");
-    game.state.start('Play')
+    game.physics.arcade.collide(this.dodge,this.dodger,handleCollision);
   }
 
-};
-
+function handleCollision function() {
+  console.log("OUUCHH");
+  game.state.start('Play')
+}
