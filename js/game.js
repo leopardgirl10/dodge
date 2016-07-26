@@ -1,5 +1,13 @@
 class BootState {
-  ini() {}
+  create() {
+    game.state.start('Preload')
+  }
+}
+
+class PreloadState {
+  create() {
+    game.state.start('Start')
+  }
 }
 
 class StartState {
