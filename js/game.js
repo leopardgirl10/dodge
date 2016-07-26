@@ -1,3 +1,6 @@
+class StartState {
+}
+
 class PlayState {
 
   init() {
@@ -68,3 +71,12 @@ class PlayState {
   }
 
 }
+
+class EndState {
+}
+
+var game = new Phaser.Game(320,568);
+game.state.add('Start', StartState);
+game.state.add('Play', PlayState);
+game.state.add('End', EndState);
+game.state.start('Play');
