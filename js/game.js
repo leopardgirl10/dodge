@@ -78,9 +78,6 @@ class PlayState {
 
 class EndState {
 
-  init() {
-  }
-
   create() {
   }
 
