@@ -59,7 +59,7 @@ class PlayState {
       this.dodge.body.velocity.y = 0;
       this.dodge.x = game.rnd.integerInRange(0,320);
     }
-    game.physics.arcade.collide(this.dodge,this.dodger,handleCollision);
+    game.physics.arcade.collide(this.dodge,this.dodger,this.handleCollision);
   }
 
   handleCollision() {
