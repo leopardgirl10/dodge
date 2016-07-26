@@ -1,8 +1,4 @@
 class StartState {
-}
-
-class PlayState {
-
   init() {
     console.log("%c~~~ Booting DogeDodge ~~~\n Compliments of SkilStak",
                 "color:#fdf6e3; background:#073642");
@@ -13,6 +9,10 @@ class PlayState {
     this.load.spritesheet('dodger','assets/dodger.png',46,64,2); // (w,h,f)
     this.load.spritesheet('dodge','assets/doge.png',64,64,1); // (w,h,f)
   }
+
+}
+
+class PlayState {
 
   create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -67,7 +67,7 @@ class PlayState {
 
   handleCollision() {
     console.log("OUUCHH");
-    game.state.start('Play')
+    game.state.start('End')
   }
 
 }
@@ -79,4 +79,4 @@ var game = new Phaser.Game(320,568);
 game.state.add('Start', StartState);
 game.state.add('Play', PlayState);
 game.state.add('End', EndState);
-game.state.start('Play');
+game.state.start('Start');
