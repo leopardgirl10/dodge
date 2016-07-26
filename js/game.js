@@ -45,9 +45,9 @@ class PlayState {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     // background
-    this.background = this.add.tileSprite(0,0,320,568,'background');
-    this.background.autoScroll(0,700);
-    this.background.scale.set(1);
+    background = this.add.tileSprite(0,0,320,568,'background');
+    background.autoScroll(0,700);
+    background.scale.set(1);
 
     // dodger
     this.dodger = this.add.sprite(160,510,'dodger');
