@@ -77,6 +77,13 @@ class PlayState {
 }
 
 class EndState {
+
+  init() {
+  }
+
+  create() {
+  }
+
 }
 
 var game = new Phaser.Game(320,568);
