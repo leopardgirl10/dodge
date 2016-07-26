@@ -1,3 +1,7 @@
+class BootState {
+  ini() {}
+}
+
 class StartState {
   init() {
     console.log("%c~~~ Booting DogeDodge ~~~\n Compliments of SkilStak",
@@ -84,7 +88,9 @@ class EndState {
 }
 
 var game = new Phaser.Game(320,568);
+game.state.add('Boot', BootState);
+game.state.add('Preload', PreloadState);
 game.state.add('Start', StartState);
 game.state.add('Play', PlayState);
 game.state.add('End', EndState);
-game.state.start('Start');
+game.state.start('Boot');
