@@ -91,6 +91,7 @@ class PlayState {
 class EndState {
 
   create() {
+    game.state.start('Start')
   }
 
 }
