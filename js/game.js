@@ -1,19 +1,30 @@
 class BootState {
-  create() {
-    game.state.start('Preload')
-  }
-}
 
-class PreloadState {
-  create() {
-    game.state.start('Start')
-  }
-}
-
-class StartState {
   init() {
     console.log("%c~~~ Booting DogeDodge ~~~\n Compliments of SkilStak",
                 "color:#fdf6e3; background:#073642");
+    this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    this.scale.pageAlignHorizontally = true;
+    this.scale.pageAlignVertically = true;
+  }
+
+  create() {
+    game.state.start('Preload')
+  }
+
+}
+
+class PreloadState {
+
+  create() {
+    game.state.start('Start')
+  }
+
+}
+
+class StartState {
+
+  init() {
   }
 
   preload() {
