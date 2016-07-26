@@ -10,6 +10,10 @@ class StartState {
     this.load.spritesheet('dodge','assets/doge.png',64,64,1); // (w,h,f)
   }
 
+  create() {
+    game.state.start('Play')
+  }
+
 }
 
 class PlayState {
