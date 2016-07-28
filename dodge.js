@@ -102,7 +102,7 @@ class PlayState {
 
     // dodgeme
     this.dodgeme = this.add.sprite(160,-32,'dodgeme');
-    resetDodgeme();
+    this.resetDodgeme();
     //this.dodgeme.smoothed = false; 
     //this.dodgeme.scale.set(1);
     this.dodgeme.anchor.set(0.5,0.5);
@@ -128,7 +128,7 @@ class PlayState {
       this.dodger.body.velocity.x = C.dodger.speed;
     }
     if (this.dodgeme.y >= 568) {
-      resetDodgeme();
+      this.resetDodgeme();
     }
     game.physics.arcade.collide(this.dodgeme,this.dodger,this.handleCollision);
   }
