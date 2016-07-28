@@ -17,7 +17,7 @@
     document.write('<script src="phaser.js"></script>');
     document.write('<script src="' + name + '"></script>');
   } else {
-    document.write("<h1>Your browser is too old to play this game.</h1>"); 
+    document.write("<h1>Sorry, your browser is too old to play this game.</h1>"); 
   }
 
 })();
