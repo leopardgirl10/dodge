@@ -5,7 +5,7 @@
 
     if (typeof Symbol == "undefined") return false;
     try {
-        eval("sdfclass Foo {}");
+        eval("class Foo {}");
         eval("var bar = (x) => x+1");
     } catch (e) { return false; }
 
