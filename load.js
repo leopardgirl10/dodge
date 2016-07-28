@@ -1,7 +1,5 @@
 (function() {
 
-  console.log("working");
-  
   function hasES6() {
     "use strict";
 
@@ -15,14 +13,9 @@
   }
 
   if (hasES6()) {
-    var p = document.createElement('script');
-    p.src = "phaser.js";
-    document.body.appendChild(p);
-    var s = document.createElement('script');
     var name = document.currentScript.dataset.file;
-    console.log(name);
-    s.src = name;
-    document.body.appendChild(s);
+    document.write('<script src="phaser.js"></script>');
+    document.write('<script src="' + name + '"></script>');
   } else {
     document.write("<h1>Your browser is too old to play this game.</h1>"); 
   }
