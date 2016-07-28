@@ -10,7 +10,7 @@ var C = {
     height: 64,
     frames: 2,
     startx: 160,
-    starty: -32,
+    starty: 500,
     bounce: 0.3,
     drag: 3000,
     speed: 800
