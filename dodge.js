@@ -1,3 +1,5 @@
+"use strict";
+
 var C = {
   background: {
     image: 'assets/background.png',
