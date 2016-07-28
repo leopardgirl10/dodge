@@ -102,7 +102,6 @@ class PlayState {
 
     // dodgeme
     this.dodgeme = this.add.sprite(160,-32,'dodgeme');
-    this.resetDodgeme();
     //this.dodgeme.smoothed = false; 
     //this.dodgeme.scale.set(1);
     this.dodgeme.anchor.set(0.5,0.5);
@@ -114,7 +113,7 @@ class PlayState {
     } else {
       this.dodgeme.body.velocity.y = C.dodgeme.velocity;
     }
-
+    this.resetDodgeme();
 
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
