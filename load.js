@@ -19,7 +19,7 @@
     p.src = "phaser.js";
     document.body.appendChild(p);
     var s = document.createElement('script');
-    var name = document.currentScript().getAttribute('data-file');
+    var name = document.currentScript.dataFile);
     console.log(name);
     s.src = name;
     document.body.appendChild(s);
