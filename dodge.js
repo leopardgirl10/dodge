@@ -20,8 +20,6 @@ var C = {
     width: 64,
     height: 64,
     frames: 1,
-    startx: 160,
-    starty: -32,
     gravity: 8000, // set to 0 to just use velocity
     velocity: 1300 // ignored if gravity > 0
   }
@@ -103,7 +101,8 @@ class PlayState {
     this.dodger.body.drag.setTo(C.dodger.drag);
 
     // dodgeme
-    this.dodgeme = this.add.sprite(C.dodgeme.startx,C.dodgeme.starty,'dodgeme');
+    this.dodgeme = this.add.sprite(160,-32,'dodgeme');
+    resetDodgeme();
     //this.dodgeme.smoothed = false; 
     //this.dodgeme.scale.set(1);
     this.dodgeme.anchor.set(0.5,0.5);
@@ -129,11 +128,15 @@ class PlayState {
       this.dodger.body.velocity.x = C.dodger.speed;
     }
     if (this.dodgeme.y >= 568) {
+      resetDodgeme();
+    }
+    game.physics.arcade.collide(this.dodgeme,this.dodger,this.handleCollision);
+  }
+
+  resetDodgeme() {
       this.dodgeme.y = -32;
       this.dodgeme.body.velocity.y = 0;
       this.dodgeme.x = game.rnd.integerInRange(0,320);
-    }
-    game.physics.arcade.collide(this.dodgeme,this.dodger,this.handleCollision);
   }
 
   handleCollision() {
