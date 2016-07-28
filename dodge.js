@@ -134,7 +134,9 @@ class PlayState {
 
   resetDodgeme() {
       this.dodgeme.y = -32;
-      this.dodgeme.body.velocity.y = 0;
+      if (C.dodgeme.gravity > 0) {
+        this.dodgeme.body.velocity.y = 0;
+      }
       this.dodgeme.x = game.rnd.integerInRange(0,320);
   }
 
