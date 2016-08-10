@@ -6,7 +6,7 @@ class BootState {
   }
 }
 
-var game = new Phaser.Game(320.568);
+var game = new Phaser.Game(320,568);
 game.state.add("Boot",BootState);
 game.state.start("Boot");
 
