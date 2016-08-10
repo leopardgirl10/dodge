@@ -1,1 +1,1 @@
-var game = new Phaser.Game(320.568);
+var game = new Phaser.Game(320,568);
