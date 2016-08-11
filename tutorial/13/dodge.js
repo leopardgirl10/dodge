@@ -15,7 +15,8 @@ var C = {
     "width": 46,
     "height": 64,
     "startx": 160,
-    "starty": 500 
+    "starty": 500,
+    "frames": 2
   }
 }
 
@@ -47,12 +48,16 @@ class LoadState {
 class PlayState {
   create() {
     console.log("Entered Play State");
-    this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
+
+    this.bg = this.add.tileSprite(0,0, C.bg.width,C.bg.height,"bg");
     this.bg.autoScroll(C.bg.xspeed,C.bg.yspeed);
+
     this.player = this.add.sprite(C.p.startx,C.p.starty,"player");
     this.player.anchor.set(0.5,0.5);
     this.player.smoothed = false;
     this.player.scale.set(1);
+    this.player.animations.add("anim");
+    this.player.animations.play("anim",C.p.frames,true);
   }
 }
 

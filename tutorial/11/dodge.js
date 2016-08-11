@@ -34,7 +34,7 @@ class BootState {
 class LoadState {
   preload() {
     console.log("Loading...");
-    this.load.image("background",C.bg.file)
+    this.load.image("bg",C.bg.file)
     this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames)
   }
   create() {
@@ -46,9 +46,8 @@ class LoadState {
 class PlayState {
   create() {
     console.log("Entered Play State");
-    this.background = this.add.tileSprite(0,0,
-                                  C.bg.width,C.bg.height,"background");
-    this.background.autoScroll(C.bg.xspeed,C.bg.yspeed);
+    this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
+    this.bg.autoScroll(C.bg.xspeed,C.bg.yspeed);
   }
 }
 
