@@ -1,3 +1,16 @@
 # Create a Basic Phaser HTML5 Game
 
 1. [Create GitHub Pages Site](01)
+1. [Setup Phaser](02)
+1. [Setup Styles](03)
+1. [Add Viewport Sizing](04)
+1. [Add A Load State](05)
+1. [Load a Background Image](06)
+1. [Add a Main Play State](07)
+1. [Make the Scrolling Background Image Appear](08)
+1. [Add Configuration Variables to the Top](09)
+1. [Add A Restart Convenience Function](10)
+1. [Load Our Player Spritesheet](11)
+1. [Add the Player Sprite to the Game](12)
+1. [Add Animation to Your Player Sprite](13)
+1. [Load the Thing to Dodge](14)
