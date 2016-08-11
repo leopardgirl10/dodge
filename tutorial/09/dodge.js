@@ -42,6 +42,12 @@ class PlayState {
   }
 }
 
+//-----------------------------------------
+
+function restart() {
+  game.start("Boot");
+}
+
 var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",BootState);
 game.state.add("Load",LoadState);
