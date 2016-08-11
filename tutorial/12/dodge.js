@@ -14,8 +14,9 @@ var C = {
     "file": "assets/player.png",
     "width": 46,
     "height": 64,
+    "frames": 2 ,
     "startx": 160,
-    "starty": 500 
+    "starty": 500
   }
 }
 

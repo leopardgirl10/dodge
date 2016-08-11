@@ -14,17 +14,19 @@ var C = {
     "file": "assets/player.png",
     "width": 46,
     "height": 64,
+    "frames": 2 ,
+    "fps": 2 ,
     "startx": 160,
-    "starty": 500,
-    "fps": 2 
+    "starty": 500
   },
   "d": {
     "file": "assets/dodge.png",
     "width": 64,
     "height": 64,
+    "frames": 2,
+    "fps": 10,
     "startx": 160,
-    "starty": 32, // make -32 (off screen) later
-    "fps": 10
+    "starty": 32 // make -32 (off screen) later
   }
 }
 
